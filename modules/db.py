@@ -4,6 +4,6 @@ def new_connection():
     return mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Chaitanya659328@+",
+        password="******",
         database="blog_db"
     )
