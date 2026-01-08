@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+ 
+</head>
+<body>
+    <div class="dashboard_container">
+        <h2>Welcome {{ session["user_name"] }}</h2>
+        <a href="{{ url_for('blog.create_post') }}">Create new post</a>
+        <a href="{{ url_for('blog.posts') }}">View posts</a>
+        <a href="{{ url_for('auth.logout') }}">Logout</a>
+    </div>
+</body>
+
+</html>

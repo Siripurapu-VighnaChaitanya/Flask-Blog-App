@@ -1,0 +1,108 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== BACKGROUND ===== */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2, #89f7fe);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animated background */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== HOME CARD ===== */
+.home_content {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.3),
+        0 0 35px rgba(102, 126, 234, 0.6);
+    animation: fadeInUp 0.8s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Card hover */
+.home_content:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.4),
+        0 0 50px rgba(118, 75, 162, 0.8);
+}
+
+/* Entry animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===== TITLE ===== */
+.home_content h1 {
+    margin-bottom: 30px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* ===== BUTTON LINKS ===== */
+.home_content a {
+    text-decoration: none;
+    margin: 12px;
+    padding: 14px 34px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 30px;
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+/* Button hover */
+.home_content a:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(118, 75, 162, 0.8);
+    background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* Button click */
+.home_content a:active {
+    transform: scale(0.95);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+    .home_content {
+        padding: 35px;
+    }
+
+    .home_content a {
+        display: block;
+        margin: 12px auto;
+        width: 100%;
+    }
+}

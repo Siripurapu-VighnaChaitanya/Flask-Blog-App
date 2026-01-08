@@ -1,0 +1,120 @@
+/* ===== PAGE BACKGROUND ===== */
+body {
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+}
+
+/* ===== POSTS CONTAINER ===== */
+.posts_container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ===== POST CARD ===== */
+.post_card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post_card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+/* ===== POST TEXT ===== */
+.post_title {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.post_content {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.post_author {
+    font-weight: bold;
+    color: #666;
+}
+
+.post_date {
+    font-size: 13px;
+    color: #999;
+}
+
+/* ===== POST ACTION BUTTONS ===== */
+.post_actions {
+    margin-top: 15px;
+}
+
+.post_actions a {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.edit_btn {
+    background: #667eea;
+}
+
+.edit_btn:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+.delete_btn {
+    background: #e63946;
+}
+
+.delete_btn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+/* ===== FLOATING ACTION BUTTONS ===== */
+.floating-actions {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.floating-actions a {
+    padding: 14px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Create button */
+.create_btn {
+    background: #28a745;
+}
+
+.create_btn:hover {
+    background: #218838;
+    transform: translateY(-3px);
+}
+
+/* Logout button */
+.logout_btn {
+    background: #dc3545;
+}
+
+.logout_btn:hover {
+    background: #c82333;
+    transform: translateY(-3px);
+}
