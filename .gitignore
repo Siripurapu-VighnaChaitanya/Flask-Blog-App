@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# SQLite database
+database.db
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+Thumbs.db

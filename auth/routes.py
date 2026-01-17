@@ -14,12 +14,12 @@ def register():
 
         conn=new_connection()
         cursor=conn.cursor()
-        query="INSERT INTO users(name,email,password) VALUES(%s,%s,%s)"
+        query="INSERT INTO users(name,email,password) VALUES(?,?,?)"
         values=(name,email,hashed_password)
         cursor.execute(query,values)
         conn.commit()
-        conn.close()
         cursor.close()
+        conn.close()
 
         flash("Registration Successful Pls Login...","Success")
         return redirect(url_for("auth.login"))
@@ -33,7 +33,7 @@ def login():
         password=request.form.get("password")
         conn=new_connection()
         cursor=conn.cursor()
-        query="SELECT * FROM users WHERE email=%s"
+        query="SELECT * FROM users WHERE email=?"
         values=(email,)
         cursor.execute(query,values)
         data=cursor.fetchone()
